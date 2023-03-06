@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Result</title>
+</head>
+<body>
+<h2>Payment Result</h2>
+<p>Total Amount: $<span th:text="${price}"></span></p>
+<p th:if="${paymentSuccess}">Payment was successful.</p>
+<p th:if="${!paymentSuccess}">Payment failed.</p>
+</body>
+</html>

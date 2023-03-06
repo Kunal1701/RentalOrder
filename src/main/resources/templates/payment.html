@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment</title>
+</head>
+<body>
+<h2>Payment</h2>
+<p>Total Amount: $<span th:text="${price}"></span></p>
+<form action="/payment" method="post">
+  <div>
+    <label>
+      <input type="radio" name="paymentMethod" value="online" checked>
+      Online Payment
+    </label>
+  </div>
+  <div>
+    <label>
+      <input type="radio" name="paymentMethod" value="cod">
+      Cash on Delivery
+    </label>
+  </div>
+  <div>
+    <button type="submit">Pay Now</button>
+  </div>
+</form>
+</body>
+</html>
